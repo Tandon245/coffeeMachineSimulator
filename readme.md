@@ -2,6 +2,10 @@
 
 A Java console application that simulates a coffee machine. This program allows users to buy coffee, fill ingredients, take money, and view the current status of the coffee machine. It supports multiple coffee types with different ingredient requirements and prices.
 
+## Technologies Used
+
+- **Java**: The project is implemented in Java, a versatile and widely-used programming language.
+
 ## Features
 
 - Buy Coffee: Users can choose from Espresso, Latte, and Cappuccino. The program checks for ingredient availability and deducts money from the machine.
@@ -13,6 +17,18 @@ A Java console application that simulates a coffee machine. This program allows 
 - Show Ingredients: Users can check the current levels of water, milk, coffee beans, and the amount of money in the machine.
 
 - Add Money: Users can add money to the machine for future coffee purchases.
+
+## Object-Oriented Programming (OOP)
+
+- The project is designed using object-oriented programming principles.
+- The `CoffeeMachine` class represents the coffee machine and encapsulates its state and operations.
+- The `CoffeeType` enum defines different coffee types as objects with properties.
+- Methods and data are organized into classes to improve code modularity and readability.
+
+## Data Structures
+
+- **HashMap**: A `HashMap` is used to map coffee types to their properties, allowing for efficient lookup of coffee type details.
+- **Enum**: The `CoffeeType` enum is used to define and represent different coffee types, encapsulating their properties.
 
 ## Usage
 
@@ -70,7 +86,3 @@ Taking money from the machine: $7
 
 ...
 
-## Acknowledgments
-
-This project was inspired by the need for a simple coffee machine simulation.
-Thanks to the Java programming community for valuable resources and support.
