@@ -72,5 +72,5 @@ Taking money from the machine: $7
 
 ## Acknowledgments
 
-'This project was inspired by the need for a simple coffee machine simulation.'
-'Thanks to the Java programming community for valuable resources and support.'
+- This project was inspired by the need for a simple coffee machine simulation.
+- Thanks to the Java programming community for valuable resources and support.
