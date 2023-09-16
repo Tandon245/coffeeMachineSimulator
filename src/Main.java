@@ -16,7 +16,6 @@ public class Main {
                 System.out.println("6. Show Money");
                 System.out.println("7. Exit");
                 System.out.println("Enter Your Choice: ");
-
                 int choice = sc.nextInt();
                 sc.nextLine(); // Consume newline
                 switch (choice) {
@@ -44,12 +43,15 @@ public class Main {
                         System.out.print("Enter amount of money to add: $");
                         int addedMoney = sc.nextInt();
                         coffeeMachine.addMoney(addedMoney);
+                        System.out.println("$"+addedMoney+" added to your account");
                         break;
                     case 6:
+
                         coffeeMachine.showMoney();
                         break;
                     case 7:
                         System.out.println("Exiting Coffee Machine Simulator.");
+                        System.out.println("Total Bill: $"+coffeeMachine.totalBill);
                         sc.close();
                         System.exit(0);
                         break;

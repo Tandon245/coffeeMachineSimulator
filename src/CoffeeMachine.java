@@ -33,8 +33,12 @@ public class CoffeeMachine {
     }
 
     public void takeMoney() {
-        System.out.println("Taking money from the machine :$" + money);
-        this.money = 0;
+        if (money == 0) {
+            System.out.println("No funds");
+        } else {
+            System.out.println("$" + money + " debited from your account");
+            this.money = 0;
+        }
     }
 
     public void showIngredients() {
@@ -43,8 +47,9 @@ public class CoffeeMachine {
         System.out.println("Coffee Beans: " + beans + " grams");
     }
 
+
     public void showMoney() {
-        System.out.println("money: $" + money);
+        System.out.println("Your Balance: $" + money);
     }
 
     private void dispenseCoffee(CoffeeType coffeeType) {
@@ -55,16 +60,19 @@ public class CoffeeMachine {
         this.beans -= coffeeType.beansNeeded;
     }
 
+    double totalBill = 0;
+
     public void buyCoffee(String type) {
         try {
             CoffeeType coffeeType = CoffeeType.valueOf(type.toUpperCase());
             if (hasIngredients(coffeeType) && hasMoney(coffeeType)) {
                 dispenseCoffee(coffeeType);
+                totalBill += coffeeType.price;  // Add the cost to the total bill
             } else {
                 if (hasMoney(coffeeType)) {
                     System.out.println("Not enough ingredients to make " + type + " coffee.");
-                }else{
-                    System.out.println("Not Enough Money to Buy "+type+" coffee.");
+                } else {
+                    System.out.println("Not Enough Money to Buy " + type + " coffee.");
                 }
 
             }
